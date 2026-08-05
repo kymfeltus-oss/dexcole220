@@ -36,7 +36,8 @@ export function ResumeDisplay() {
         className="resume-image"
         priority
         unoptimized
-        sizes="(max-width: 1100px) 100vw, 1020px"
+        sizes="(max-width: 480px) 100vw, (max-width: 1024px) 92vw, 1020px"
+        style={{ width: "100%", height: "auto", maxWidth: "100%" }}
       />
       <figcaption className="sr-only">
         Full professional resume for {contact.fullName}
