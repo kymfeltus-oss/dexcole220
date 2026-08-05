@@ -118,6 +118,57 @@ code {
   text-align: center;
   max-width: min(42rem, 100%);
   padding: 0.2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__brand {
+  margin: 0 0 0.85rem;
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.hero-photo {
+  position: relative;
+  width: min(72vw, 22.5rem);
+  max-width: 360px;
+  margin: 0 0 1.1rem;
+  aspect-ratio: 1 / 1;
+}
+
+.hero-photo__glow {
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(107, 63, 160, 0.38),
+    rgba(201, 162, 39, 0.12) 42%,
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-photo__image {
+  position: relative !important;
+  z-index: 1;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid rgba(201, 162, 39, 0.45);
+  box-shadow:
+    0 0 0 6px rgba(107, 63, 160, 0.18),
+    0 18px 48px rgba(0, 0, 0, 0.55);
+  background: #000;
 }
 
 .intro__name {

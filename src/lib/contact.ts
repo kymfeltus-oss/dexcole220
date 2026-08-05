@@ -11,6 +11,10 @@ export const contact = {
   instagram: "https://www.instagram.com/dexcole220",
   supportingStatement:
     "Building strong relationships, clear communication, shared accountability, and dependable music ministry through excellence and service.",
+  brand: "D. Cole",
+  photoImagePath: "/images/dexter-coleman-original.jpg",
+  photoImageWidth: 1284,
+  photoImageHeight: 1284,
   resumeImagePath: "/images/dexter-coleman-resume.png",
   vcfPath: "/dexter-l-coleman-jr.vcf",
   resumeImageWidth: 941,

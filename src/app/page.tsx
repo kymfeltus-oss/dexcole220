@@ -1,4 +1,5 @@
 import { ContactActions } from "@/components/contact-actions";
+import { HeroPhoto } from "@/components/hero-photo";
 import { ResumeDisplay } from "@/components/resume-display";
 import { ShareResumeButton } from "@/components/share-resume-button";
 import { contact } from "@/lib/contact";
@@ -8,6 +9,8 @@ export default function Home() {
     <div className="page-shell">
       <main className="page-main">
         <header className="intro">
+          <p className="intro__brand">{contact.brand}</p>
+          <HeroPhoto />
           <p className="intro__name">{contact.fullName}</p>
           <p className="intro__title">{contact.title}</p>
           <p className="intro__statement">{contact.supportingStatement}</p>
