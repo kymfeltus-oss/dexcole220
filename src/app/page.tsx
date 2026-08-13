@@ -1,34 +1,24 @@
-import { ContactActions } from "@/components/contact-actions";
 import { HeroPhoto } from "@/components/hero-photo";
-import { ResumeDisplay } from "@/components/resume-display";
-import { ShareResumeButton } from "@/components/share-resume-button";
 import { contact } from "@/lib/contact";
 
 export default function Home() {
   return (
-    <div className="page-shell">
-      <main className="page-main">
-        <header className="intro">
+    <div className="page-shell coming-soon-shell">
+      <main className="page-main coming-soon-main">
+        <header className="intro coming-soon-intro">
           <p className="intro__brand">{contact.brand}</p>
           <HeroPhoto />
           <p className="intro__name">{contact.fullName}</p>
           <p className="intro__title">{contact.title}</p>
-          <p className="intro__statement">{contact.supportingStatement}</p>
+          <p className="coming-soon__eyebrow">Coming Soon</p>
+          <h1 className="coming-soon__headline">A new experience is on the way</h1>
+          <p className="intro__statement coming-soon__copy">
+            Thank you for visiting dexcole220.com. This site is being refreshed
+            and will return shortly with an updated professional presence.
+          </p>
         </header>
 
-        <ContactActions />
-
-        <ResumeDisplay />
-
-        <section className="bottom-actions" aria-label="Resume actions">
-          <a
-            href={contact.phoneHref}
-            className="action-btn action-btn--primary"
-            aria-label="Call Dexter"
-          >
-            <PhoneIcon />
-            <span>Call Dexter</span>
-          </a>
+        <nav aria-label="Contact options" className="contact-actions">
           <a
             href={contact.emailHref}
             className="action-btn action-btn--primary"
@@ -37,17 +27,17 @@ export default function Home() {
             <EmailIcon />
             <span>Email Dexter</span>
           </a>
-          <ShareResumeButton />
           <a
-            href={contact.vcfPath}
+            href={contact.instagram}
             className="action-btn action-btn--secondary"
-            download="dexter-l-coleman-jr.vcf"
-            aria-label="Save contact as vCard"
+            aria-label="Instagram (opens in a new tab)"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <SaveIcon />
-            <span>Save Contact</span>
+            <InstagramIcon />
+            <span>Instagram</span>
           </a>
-        </section>
+        </nav>
       </main>
 
       <footer className="site-footer">
@@ -56,24 +46,6 @@ export default function Home() {
         </p>
       </footer>
     </div>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.35a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.32 1.54.55 2.35.68A2 2 0 0 1 22 16.92z" />
-    </svg>
   );
 }
 
@@ -96,7 +68,7 @@ function EmailIcon() {
   );
 }
 
-function SaveIcon() {
+function InstagramIcon() {
   return (
     <svg
       aria-hidden="true"
@@ -109,9 +81,9 @@ function SaveIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-      <polyline points="17 21 17 13 7 13 7 21" />
-      <polyline points="7 3 7 8 15 8" />
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
     </svg>
   );
 }

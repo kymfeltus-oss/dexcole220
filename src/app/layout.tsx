@@ -4,34 +4,34 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dexcole220.com"),
-  title: "Dexter L. Coleman Jr. | Music Director",
+  title: "Coming Soon | Dexter L. Coleman Jr.",
   description:
-    "Professional resume and music ministry profile for Dexter L. Coleman Jr., an accomplished music director and Hammond organist based in the Dallas Fort Worth Metroplex.",
+    "dexcole220.com is being refreshed. A new professional presence for Dexter L. Coleman Jr., Music Director, is coming soon.",
   alternates: {
     canonical: "https://dexcole220.com",
   },
   openGraph: {
     type: "website",
     url: "https://dexcole220.com",
-    title: "Dexter L. Coleman Jr. | Music Director",
+    title: "Coming Soon | Dexter L. Coleman Jr.",
     description:
-      "View the professional music ministry resume of Dexter L. Coleman Jr.",
+      "A new professional presence for Dexter L. Coleman Jr. is coming soon.",
     siteName: "Dexter L. Coleman Jr.",
     images: [
       {
-        url: contact.resumeImagePath,
-        width: contact.resumeImageWidth,
-        height: contact.resumeImageHeight,
-        alt: `${contact.fullName} professional resume`,
+        url: contact.photoImagePath,
+        width: contact.photoImageWidth,
+        height: contact.photoImageHeight,
+        alt: `${contact.fullName} professional portrait`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dexter L. Coleman Jr. | Music Director",
+    title: "Coming Soon | Dexter L. Coleman Jr.",
     description:
-      "View the professional music ministry resume of Dexter L. Coleman Jr.",
-    images: [contact.resumeImagePath],
+      "A new professional presence for Dexter L. Coleman Jr. is coming soon.",
+    images: [contact.photoImagePath],
   },
   robots: {
     index: true,
